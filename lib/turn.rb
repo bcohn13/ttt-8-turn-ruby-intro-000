@@ -37,11 +37,11 @@ def turn(board)
   puts "Please enter 1-9:"
 
   number = gets
-  input_to_index(number)
+num_ind =  input_to_index(number)
 
-  if valid_move?(board,input_to_index(number))
+  if valid_move?(board,num_ind)
 
-    move(board, input_to_index(number), value = "X")
+    move(board, num_ind, value = "X")
     display_board(board)
   else
     turn(board)
